@@ -58,7 +58,7 @@ function initCLIApp() {
   const args = getArgs(process.argv);
 
   if (args.h) {
-    logHelp();
+    return logHelp();
   }
 
   if (args.s) {
@@ -70,7 +70,7 @@ function initCLIApp() {
     return saveToken(args.t);
   }
 
-  getForecast();
+  return getForecast();
 }
 
 initCLIApp();

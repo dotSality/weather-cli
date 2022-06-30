@@ -22,7 +22,7 @@ function logForecast(data) {
     ${data.totalDate},
     ${data.location},
     ${data.weatherType},
-    temperature - ${data.temperature} °C,
+    temperature - ${data.temperature} °C, feels like ${data.feelsTemperature} °C,
     wind - ${data.windSpeed} m/s.
   `);
 }

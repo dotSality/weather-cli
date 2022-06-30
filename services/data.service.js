@@ -39,6 +39,8 @@ function handleForecastData(data) {
 
   const temperature = main.temp;
 
+  const feelsTemperature = main.feels_like;
+
   const windSpeed = wind.speed;
 
   return {
@@ -46,6 +48,7 @@ function handleForecastData(data) {
     weatherType,
     location,
     temperature,
+    feelsTemperature,
     windSpeed,
   };
 }
