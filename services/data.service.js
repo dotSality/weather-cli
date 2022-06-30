@@ -24,9 +24,9 @@ function getIcon(icon) {
 }
 
 function handleForecastData(data) {
-  const { weather, main, wind, sys, name, dt } = data;
+  const { weather, main, wind, sys, name } = data;
 
-  const totalDate = dayjs().locale('en').format(' HH:mm, MMMM, DD');
+  const totalDate = dayjs().locale('en').format('HH:mm, MMMM, DD');
 
   const weatherType = weather.reduce((acc, { description, icon }, index) => {
     if (index === 0) {
