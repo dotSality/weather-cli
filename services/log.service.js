@@ -12,9 +12,19 @@ function logSuccess(message) {
 function logHelp() {
   console.log(dedent`${chalk.bgGray(' HELP ')}: 
     No parameters - weather output
-    -s [CITY] - for setting city
-    -h  - for help output
-    -t [API_KEY] - for token saving`);
+    -s [CITY]      - for setting city
+    -h             - for help output
+    -t [API_KEY]   - for token saving`);
 }
 
-export { logError, logSuccess, logHelp };
+function logForecast(data) {
+  console.log(dedent`${chalk.black.bgYellowBright('FORECAST')}:
+    ${data.totalDate},
+    ${data.location},
+    ${data.weatherType},
+    temperature - ${data.temperature} °C,
+    wind - ${data.windSpeed} m/s.
+  `);
+}
+
+export { logError, logSuccess, logHelp, logForecast };

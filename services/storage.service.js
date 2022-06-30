@@ -22,16 +22,16 @@ async function getKeyValue(key) {
 }
 
 async function saveKeyValue(key, value) {
-    let data = {};
+  let data = {};
 
-    if (await isExist(filepath)) {
-      const file = await promises.readFile(filepath);
-      data = JSON.parse(file);
-    }
+  if (await isExist(filepath)) {
+    const file = await promises.readFile(filepath);
+    data = JSON.parse(file);
+  }
 
-    data[key] = value;
+  data[key] = value;
 
-    await promises.writeFile(filepath, JSON.stringify(data));
+  await promises.writeFile(filepath, JSON.stringify(data));
 }
 
 export { saveKeyValue, getKeyValue };
